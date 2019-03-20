@@ -57,7 +57,7 @@ func (c *ClientConn) UnloadShared(key *UnloadKeyRequest) error {
 	return nil
 }
 
-// get a the names of the shared secrets currently loaded
+// GetShared gets a the names of the shared secrets currently loaded
 func (c *ClientConn) GetShared() ([]string, error) {
 	msg, err := c.Request("get-shared", nil)
 	if err != nil {
